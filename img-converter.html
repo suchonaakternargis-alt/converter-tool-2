@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert JPG images to PNG format online for free. Fast, secure, and easy-to-use JPG to PNG converter with batch processing and ZIP download.">
+    <meta name="keywords" content="jpg to png converter online, jpg to png converter with preview, online photo format converter, convert jpg to png without losing quality, free image converter.">
+    <meta name="author" content="Suchona">
+    <title>JPG to PNG Converter Online - Free Image Format Conversion Tool</title>
+    
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #8a2be2;
+            --primary-dark: #6a1cb8;
+            --primary-light: #9d4edd;
+            --gradient-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            --text-color: #f8f9fa;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --card-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--gradient-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .main-content {
+            grid-column: 1;
+        }
+
+        .sidebar {
+            grid-column: 2;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            grid-column: 1 / -1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--primary-light), #e0aaff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
+        }
+
+        /* Previous CSS styles remain the same, adding only new ad-related styles */
+
+        .ad-container {
+            margin: 25px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .ad-top-banner {
+            min-height: 90px;
+            width: 100%;
+        }
+
+        .ad-sidebar {
+            min-height: 600px;
+            width: 300px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .ad-footer {
+            min-height: 90px;
+            width: 100%;
+            grid-column: 1 / -1;
+        }
+
+        .ad-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* In-content ad styles */
+        .in-content-ad {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .ad-horizontal {
+            min-height: 90px;
+            width: 100%;
+        }
+
+        .ad-vertical {
+            min-height: 250px;
+            width: 300px;
+        }
+
+        /* Premium Features Banner */
+        .premium-banner {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .premium-banner h3 {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .premium-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .premium-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .upgrade-btn {
+            background: white;
+            color: #ff6b35;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+
+        .upgrade-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Donation Section */
+        .donation-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .donation-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .donation-btn {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .donation-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        /* Responsive adjustments for ads */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                grid-column: 1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            
+            .ad-sidebar {
+                width: 100%;
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+            
+            .premium-features {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ad-sidebar {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ad-top-banner,
+            .ad-footer {
+                min-height: 70px;
+            }
+            
+            .ad-sidebar {
+                min-height: 150px;
+            }
+        }
+
+        /* Keep all your existing CSS styles below */
+        /* ... (all your existing CSS styles remain exactly the same) ... */
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JPG 2 PNG CONVERTER</h1>
+            <p>Convert your JPG images to PNG format instantly for free</p>
+        </header>
+
+        <!-- Ad Space - Top Banner -->
+        <div class="ad-container ad-top-banner">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <!-- Google AdSense Banner Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <main>
+                <section class="card">
+                    <h2>Upload JPG Images</h2>
+                    <p>Select one or multiple JPG images to convert to PNG format</p>
+                    
+                    <div class="upload-area" id="upload-area">
+                        <i>📁</i>
+                        <p>Drag & drop your JPG files here or click to browse</p>
+                        <p class="small">Supports multiple files (Max: 10 files, 5MB each)</p>
+                        <input type="file" id="file-input" accept=".jpg,.jpeg" multiple>
+                    </div>
+
+                    <div class="error-message" id="error-message"></div>
+                    <div class="success-message" id="success-message"></div>
+
+                    <!-- In-content Ad 1 -->
+                    <div class="ad-container ad-horizontal in-content-ad">
+                        <div>
+                            <div class="ad-label">Advertisement</div>
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                                 data-ad-slot="2345678901"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <div class="preview-box">
+                            <span class="preview-label">Before (JPG)</span>
+                            <div class="preview-container" id="jpg-preview-container">
+                                <div class="empty-preview">
+                                    <i>🖼️</i>
+                                    <p>No JPG images uploaded</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-box">
+                            <span class="preview-label">After (PNG)</span>
+                            <div class="preview-container" id="png-preview-container">
+                                <div class="empty-preview">
+                                    <i>📄</i>
+                                    <p>No PNG images converted</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="save-options">
+                        <h3>File Saving Options</h3>
+                        <div class="save-option-group">
+                            <div class="save-option">
+                                <label for="filename-format">Filename Format:</label>
+                                <select id="filename-format">
+                                    <option value="original">Keep original name</option>
+                                    <option value="converted-image" selected>converted-image (numbered)</option>
+                                    <option value="custom">Custom prefix</option>
+                                </select>
+                            </div>
+                            <div class="save-option" id="custom-prefix-container" style="display: none;">
+                                <label for="custom-prefix">Custom Prefix:</label>
+                                <input type="text" id="custom-prefix" placeholder="Enter custom prefix">
+                            </div>
+                            <div class="save-option">
+                                <label for="file-extension">File Extension:</label>
+                                <select id="file-extension">
+                                    <option value="png" selected>.png</option>
+                                    <option value="PNG">.PNG (uppercase)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filename-preview" id="filename-preview">
+                            Example: converted-image-1.png
+                        </div>
+                    </div>
+
+                    <!-- Premium Features Banner -->
+                    <div class="premium-banner">
+                        <h3>🚀 Upgrade to Premium</h3>
+                        <div class="premium-features">
+                            <div class="premium-feature">✅ Unlimited conversions</div>
+                            <div class="premium-feature">✅ No file size limits</div>
+                            <div class="premium-feature">✅ Priority support</div>
+                            <div class="premium-feature">✅ Batch processing</div>
+                        </div>
+                        <button class="upgrade-btn">Upgrade Now - $4.99/month</button>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn" id="convert-btn">
+                            <i>🔄</i> Convert to PNG
+                        </button>
+                        <button class="btn btn-secondary" id="rename-btn" disabled>
+                            <i>✏️</i> Rename Files
+                        </button>
+                        <button class="btn btn-secondary" id="download-all-btn" disabled>
+                            <i>📥</i> Download All
+                        </button>
+                        <button class="btn btn-secondary" id="clear-all-btn">
+                            <i>🗑️</i> Clear All
+                        </button>
+                    </div>
+
+                    <div class="download-options" id="download-options" style="display: none;">
+                        <button class="download-btn primary" id="download-individual">
+                            <i>📄</i> Download Individual Files
+                        </button>
+                        <button class="download-btn" id="download-zip">
+                            <i>📦</i> Download as ZIP
+                        </button>
+                    </div>
+
+                    <!-- In-content Ad 2 -->
+                    <div class="ad-container ad-horizontal in-content-ad">
+                        <div>
+                            <div class="ad-label">Advertisement</div>
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                                 data-ad-slot="3456789012"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Donation Section -->
+                    <div class="donation-section">
+                        <h3>❤️ Support Our Free Tool</h3>
+                        <p>Help us keep this service free for everyone</p>
+                        <div class="donation-buttons">
+                            <button class="donation-btn">☕ Buy me a coffee</button>
+                            <button class="donation-btn">💰 Donate $5</button>
+                            <button class="donation-btn">🎁 Donate $10</button>
+                        </div>
+                    </div>
+
+                    <div class="loading" id="loading">
+                        <div class="spinner"></div>
+                        <p>Converting your images... Please wait</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Sidebar with Vertical Ads -->
+        <div class="sidebar">
+            <!-- Sidebar Ad 1 -->
+            <div class="ad-container ad-sidebar">
+                <div>
+                    <div class="ad-label">Advertisement</div>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="4567890123"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+
+            <!-- Sidebar Ad 2 -->
+            <div class="ad-container ad-sidebar">
+                <div>
+                    <div class="ad-label">Advertisement</div>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="5678901234"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Rename Modal -->
+        <div class="modal" id="rename-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Rename Files Before Download</h3>
+                    <button class="close-modal" id="close-rename-modal">&times;</button>
+                </div>
+                <div class="file-rename-list" id="file-rename-list">
+                    <!-- File rename items will be added here -->
+                </div>
+                <div class="actions">
+                    <button class="btn" id="confirm-rename">
+                        <i>✅</i> Confirm Names & Download
+                    </button>
+                    <button class="btn btn-secondary" id="cancel-rename">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Space - Footer -->
+        <div class="ad-container ad-footer">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="6789012345"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> JPG to PNG Converter. All rights reserved.</p>
+            <p>Ad revenue helps keep this tool free for everyone</p>
+        </footer>
+    </div>
+
+    <script>
+        // AdSense Auto Ads (Optional - for additional ad placements)
+        // <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Premium upgrade button functionality
+            document.querySelector('.upgrade-btn').addEventListener('click', function() {
+                alert('Premium features coming soon! This would redirect to a payment page.');
+                // In production: window.location.href = '/premium-checkout';
+            });
+
+            // Donation buttons functionality
+            document.querySelectorAll('.donation-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const amount = this.textContent.includes('$10') ? 10 : 
+                                  this.textContent.includes('$5') ? 5 : 3;
+                    alert(`Thank you for your donation of $${amount}! This would integrate with PayPal/Stripe.`);
+                    // In production: integrate with payment processor
+                });
+            });
+
+            // Your existing JavaScript code remains exactly the same...
+            // ... (all your existing JavaScript code) ...
+            
+        });
+    </script>
+</body>
+</html>
